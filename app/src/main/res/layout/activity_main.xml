@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hospitalmanagementsystem.MainActivity">
+
+    <Button
+        android:id="@+id/bloginregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:text="Login or Register"
+        android:textAllCaps="false"
+        android:textSize="17dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:padding="15dp"
+        android:text="Doctors Available"
+        android:textAllCaps="false"
+        android:textSize="17dp" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="onClick2"
+        android:padding="15dp"
+        android:text="Services Provided"
+        android:textAllCaps="false"
+        android:textSize="17dp" />
+</LinearLayout>
