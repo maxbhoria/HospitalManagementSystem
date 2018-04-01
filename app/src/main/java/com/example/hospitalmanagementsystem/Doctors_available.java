@@ -3,7 +3,8 @@ package com.example.hospitalmanagementsystem;
     import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
+    import android.support.v7.widget.Toolbar;
+    import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,15 +17,16 @@ import java.util.ArrayList;
     ListView lv_avail;
     ArrayList<String> dname = new ArrayList<>();
     DatabaseHelper db = new DatabaseHelper(this);
+        Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doctors_available);
-
         lv_avail = (ListView) findViewById(R.id.lv_doc_available);
-
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Cursor y = db.checkduplicates_in_user_credentials("", "", "get_all_doctors");
 
         if (y.moveToFirst()) {

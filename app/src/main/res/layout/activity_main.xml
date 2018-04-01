@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hospital"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context="com.example.hospitalmanagementsystem.MainActivity">
 
-    <Button
-        android:id="@+id/bloginregister"
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="15dp"
-        android:background="@android:color/transparent"
-        android:textAllCaps="false"
-        android:text="@string/login_or_register"
-        android:textSize="17sp" />
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.v7.widget.Toolbar>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="onClick"
-        android:padding="15dp"
-        android:background="@android:color/transparent"
-        android:textAllCaps="false"
-        android:text="@string/doctors_available"
-        android:textSize="17sp" />
+        android:layout_height="match_parent"
+        android:background="@drawable/hospital"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
+        <Button
+            android:id="@+id/bloginregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:text="@string/login_or_register"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="onClick2"
-        android:padding="15dp"
-        android:background="@android:color/transparent"
-        android:textAllCaps="false"
-        android:text="@string/services_provided"
-        android:textSize="17sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:onClick="onClick"
+            android:padding="15dp"
+            android:text="@string/doctors_available"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
+
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:onClick="onClick2"
+            android:padding="15dp"
+            android:text="@string/services_provided"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
+    </LinearLayout>
 </LinearLayout>
