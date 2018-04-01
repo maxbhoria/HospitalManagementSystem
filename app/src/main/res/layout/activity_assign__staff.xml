@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Assign Staff"
-        android:textSize="25dp"
+        android:text="@string/assign_staff"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Select Doctor :"
-        android:textSize="25dp" />
+        android:text="@string/select_doctor"
+        android:textSize="25sp" />
 
     <Spinner
         android:id="@+id/spinner_doctor"
@@ -35,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Select Staff Member :"
-        android:textSize="25dp" />
+        android:text="@string/select_staff_member"
+        android:textSize="25sp" />
 
     <Spinner
         android:id="@+id/spinner_staff"
@@ -52,5 +52,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:text="Assign" />
+        android:text="@string/assign" />
 </LinearLayout>

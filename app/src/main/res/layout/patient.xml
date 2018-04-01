@@ -20,7 +20,7 @@
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
             android:text=""
-            android:textSize="30dp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <Button
@@ -30,9 +30,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Personal Info"
+        android:text="@string/personal_info"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_p_appointment"
@@ -41,9 +41,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Appointment"
+        android:text="@string/appointment"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_p_report"
@@ -52,9 +52,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="View Reports"
+        android:text="@string/view_reports"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_p_bills"
@@ -63,9 +63,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Remaining Bills"
+        android:text="@string/remaining_bills"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_p_feedback"
@@ -74,7 +74,7 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Give/View Feedback"
+        android:text="@string/give_view_feedback"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 </LinearLayout>

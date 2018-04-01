@@ -11,16 +11,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-        android:text="Apply for a new leave"
-        android:textSize="25dp" />
+        android:text="@string/apply_for_a_new_leave"
+        android:textSize="25sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-        android:text="From"
-        android:textSize="20dp"
+        android:text="@string/from"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -39,9 +39,9 @@
             android:layout_marginRight="5dp"
             android:layout_weight="39"
             android:gravity="center"
-            android:hint="dd"
+            android:hint="@string/dd"
             android:inputType="date"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <Spinner
             android:id="@+id/spinnermonth1"
@@ -60,9 +60,9 @@
             android:layout_marginRight="5dp"
             android:layout_weight="33"
             android:gravity="center"
-            android:hint="yy"
+            android:hint="@string/yy"
             android:inputType="date"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
 
     </LinearLayout>
@@ -72,8 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-        android:text="To"
-        android:textSize="20dp"
+        android:text="@string/to"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -92,9 +92,9 @@
             android:layout_marginRight="5dp"
             android:layout_weight="39"
             android:gravity="center"
-            android:hint="dd"
+            android:hint="@string/dd"
             android:inputType="date"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <Spinner
             android:id="@+id/spinnermonth2"
@@ -113,9 +113,9 @@
             android:layout_marginRight="5dp"
             android:layout_weight="33"
             android:gravity="center"
-            android:hint="yy"
+            android:hint="@string/yy"
             android:inputType="date"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
 
     </LinearLayout>
@@ -127,7 +127,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:onClick="onClick"
-        android:text="Apply"
+        android:text="@string/apply"
         android:textAllCaps="false" />
 
     <TextView
@@ -135,8 +135,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Or"
-        android:textSize="20dp" />
+        android:text="@string/or"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/view_previous"
@@ -145,6 +145,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:onClick="onClick"
-        android:text="View Previous"
+        android:text="@string/view_previous"
         android:textAllCaps="false" />
 </LinearLayout>

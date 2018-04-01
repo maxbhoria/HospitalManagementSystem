@@ -4,14 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:text="This app is used to create a system to manage all the operations associated with a Hospital. THe different modules covered in this app are:"
-        android:textSize="30dp"
+        android:text="@string/this_app_is_used_to_create_a_system_to_manage_all_the_operations_associated_with_a_hospital_the_different_modules_covered_in_this_app_are"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
@@ -19,8 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:text="The different modules covered in this app are: Doctors, Patients, Staff members, Desktop_admin"
-        android:textSize="30dp"
+        android:text="@string/the_different_modules_covered_in_this_app_are_doctors_patients_staff_members_desktop_admin"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
 </LinearLayout>

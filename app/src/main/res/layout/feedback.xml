@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,8 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:text="Feedback"
-        android:textSize="35dp"
+        android:text="@string/feedback"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -40,7 +41,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="50" />
+                android:layout_weight="50"
+                android:inputType="text"
+                tools:ignore="LabelFor,NestedWeights" />
 
             <Button
                 android:layout_width="match_parent"
@@ -51,7 +54,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_weight="50"
                 android:onClick="onClick"
-                android:text="Submit Feedback" />
+                android:text="@string/submit_feedback" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

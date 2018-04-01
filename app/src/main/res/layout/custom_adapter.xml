@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="65"
-            android:text="Doctor Name :"
-            android:textSize="15dp" />
+            android:text="@string/doctor_name"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/d_name_adapter"
@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="35"
-            android:text="Doctor Name"
-            android:textSize="15dp" />
+            android:text="@string/doctor_name"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,8 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="65"
-            android:text="Patient Name :"
-            android:textSize="15dp" />
+            android:text="@string/patient_name"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/p_name_adapter"
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="35"
-            android:text="Patient Name"
-            android:textSize="15dp" />
+            android:text="@string/patient_name"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,8 +64,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="65"
-            android:text="Problem"
-            android:textSize="15dp" />
+            android:text="@string/problem"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/problem_adapter"
@@ -73,8 +73,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="35"
-            android:text="Doctor Name"
-            android:textSize="15dp" />
+            android:text="@string/doctor_name"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <!--<Button

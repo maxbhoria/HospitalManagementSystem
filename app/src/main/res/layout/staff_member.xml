@@ -22,7 +22,7 @@
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
             android:text=""
-            android:textSize="30dp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <Button
@@ -32,9 +32,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Personal Info"
+        android:text="@string/personal_info"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_s_assigned_doctor"
@@ -43,9 +43,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="List of Assigned Doctors"
+        android:text="@string/list_of_assigned_doctors"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_feedback"
@@ -54,8 +54,8 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Give/View Feedback"
+        android:text="@string/give_view_feedback"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
 </LinearLayout>

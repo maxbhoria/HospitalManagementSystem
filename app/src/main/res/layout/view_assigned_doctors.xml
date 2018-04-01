@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center_horizontal"
-        android:text="List of Assigned Doctors"
-        android:textSize="22dp" />
+        android:text="@string/list_of_assigned_doctors"
+        android:textSize="22sp" />
 
     <ListView
         android:id="@+id/lv_assigned_doctors"

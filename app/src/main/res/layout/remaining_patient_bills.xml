@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center_horizontal"
-        android:text="Patient with unpaid Bills"
-        android:textSize="22dp" />
+        android:text="@string/patient_with_unpaid_bills"
+        android:textSize="22sp" />
 
     <ListView
         android:id="@+id/lv_remaining_bills"

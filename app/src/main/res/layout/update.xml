@@ -12,11 +12,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
 
@@ -25,8 +26,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:gravity="center"
-                android:text="Update Info"
-                android:textSize="30dp"
+                android:text="@string/update_info"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -44,8 +45,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="50"
                     android:gravity="center"
-                    android:hint="First name"
-                    android:textSize="20dp" />
+                    android:hint="@string/first_name"
+                    android:inputType="text"
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etlname"
@@ -56,8 +58,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="50"
                     android:gravity="center"
-                    android:hint="Last name"
-                    android:textSize="20dp" />
+                    android:hint="@string/last_name"
+                    android:inputType="text"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -76,9 +79,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="50"
                     android:gravity="center"
-                    android:hint="Age"
+                    android:hint="@string/age"
                     android:inputType="number"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinnersex"
@@ -108,9 +111,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="39"
                     android:gravity="center"
-                    android:hint="dd"
+                    android:hint="@string/dd"
                     android:inputType="date"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinnermonth"
@@ -129,13 +132,11 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="33"
                     android:gravity="center"
-                    android:hint="yy"
+                    android:hint="@string/yy"
                     android:inputType="date"
-                    android:textSize="20dp" />
-
+                    android:textSize="20sp" />
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -144,7 +145,6 @@
 
                 android:orientation="horizontal"
                 android:weightSum="100">
-
 
                 <Spinner
                     android:id="@+id/spinnerbgroup"
@@ -162,15 +162,12 @@
                     android:background="@android:drawable/btn_dropdown"
                     android:spinnerMode="dropdown" />
 
-
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-
                 android:orientation="horizontal"
                 android:weightSum="100">
 
@@ -183,8 +180,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="50"
                     android:gravity="center"
-                    android:hint="City"
-                    android:textSize="20dp" />
+                    android:hint="@string/city"
+                    android:inputType="text"
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etpin"
@@ -195,9 +193,10 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="50"
                     android:gravity="center"
-                    android:hint="Pincode"
+                    android:hint="@string/pincode"
                     android:inputType="number"
-                    android:textSize="20dp" />
+                    android:textSize="20sp"
+                    tools:ignore="TextFields" />
             </LinearLayout>
 
             <EditText
@@ -208,9 +207,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:hint="Mobile no."
+                android:hint="@string/mobile_no"
                 android:inputType="phone"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etusername"
@@ -220,8 +219,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:hint="Username"
-                android:textSize="20dp" />
+                android:hint="@string/username"
+                android:inputType="text"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etpassword"
@@ -231,9 +231,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:hint="Password"
-                android:password="true"
-                android:textSize="20dp" />
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/bregister"
@@ -243,7 +243,7 @@
                 android:onClick="onClick"
                 android:paddingLeft="30dp"
                 android:paddingRight="30dp"
-                android:text="Update"
+                android:text="@string/update"
                 android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>

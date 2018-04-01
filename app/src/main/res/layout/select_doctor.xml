@@ -3,20 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Select to Apply For Appointment"
         android:layout_margin="20dp"
-        android:textSize="18dp" />
+        android:gravity="center"
+        android:text="@string/select_to_apply_for_appointment"
+        android:textSize="18sp" />
 
     <ListView
         android:id="@+id/lv_doctors_available"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#2f2f2f"
-        android:dividerHeight="0.5dp"
-        >
-    </ListView>
+        android:dividerHeight="0.5dp" />
 </LinearLayout>

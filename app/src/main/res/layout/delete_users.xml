@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:text="Delete Users"
-        android:textSize="25dp" />
+        android:text="@string/delete_users"
+        android:textSize="25sp" />
 
     <ListView
         android:id="@+id/lv_all_users"

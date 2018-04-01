@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/hospital"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.example.hospitalmanagementsystem.MainActivity">
 
     <Button
@@ -12,9 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="15dp"
-        android:text="Login or Register"
+        android:background="@android:color/transparent"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:text="@string/login_or_register"
+        android:textSize="17sp" />
 
     <Button
         android:layout_width="match_parent"
@@ -22,9 +25,10 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Doctors Available"
+        android:background="@android:color/transparent"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:text="@string/doctors_available"
+        android:textSize="17sp" />
 
     <Button
 
@@ -33,7 +37,8 @@
         android:layout_gravity="center"
         android:onClick="onClick2"
         android:padding="15dp"
-        android:text="Services Provided"
+        android:background="@android:color/transparent"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:text="@string/services_provided"
+        android:textSize="17sp" />
 </LinearLayout>

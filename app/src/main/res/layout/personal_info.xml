@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,20 +9,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Personal Details"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
         android:layout_marginBottom="20dp"
-        />
+        android:gravity="center_horizontal"
+        android:text="@string/personal_details"
+        android:textSize="20sp" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -35,13 +35,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Name : "
+                    android:gravity="start"
+                    android:text="@string/name"
                     android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold" />
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
 
-                                                                                                                            <TextView
+                <TextView
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -50,7 +51,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -64,10 +65,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Age : "
+                    android:gravity="start"
+                    android:text="@string/age"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -79,7 +80,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
 
@@ -94,10 +95,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Sex : "
+                    android:gravity="start"
+                    android:text="@string/sex"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -109,7 +110,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
 
@@ -124,10 +125,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="DOB : "
+                    android:gravity="start"
+                    android:text="@string/dob"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -139,7 +140,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -153,10 +154,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="B Group : "
+                    android:gravity="start"
+                    android:text="@string/b_group"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -168,7 +169,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -182,10 +183,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="U Type : "
+                    android:gravity="start"
+                    android:text="@string/u_type"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -197,7 +198,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -211,10 +212,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="City"
+                    android:gravity="start"
+                    android:text="@string/city"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -226,7 +227,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -240,10 +241,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Pincode : "
+                    android:gravity="start"
+                    android:text="@string/pincode"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -255,7 +256,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -269,10 +270,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="M. No. : "
+                    android:gravity="start"
+                    android:text="@string/m_no"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -284,7 +285,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -298,10 +299,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Username:"
+                    android:gravity="start"
+                    android:text="@string/username"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -313,7 +314,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
 
@@ -328,10 +329,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Password: "
+                    android:gravity="start"
+                    android:text="@string/password"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -342,18 +343,16 @@
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:textColor="#000000"
-                    android:textSize="17dp" />
+                    android:textSize="17sp" />
             </LinearLayout>
-
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
-                android:text="Update"
                 android:onClick="onClick"
-                />
+                android:text="@string/update" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

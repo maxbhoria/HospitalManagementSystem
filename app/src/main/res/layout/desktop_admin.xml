@@ -20,7 +20,7 @@
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
             android:text=""
-            android:textSize="30dp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <Button
@@ -30,9 +30,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Personal Info"
+        android:text="@string/personal_info"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_da_patient_appointment"
@@ -41,9 +41,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Grant Patient Appointment"
+        android:text="@string/grant_patient_appointment"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_da_assign"
@@ -52,9 +52,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Assign Staff"
+        android:text="@string/assign_staff"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_da_remaining_bills"
@@ -63,9 +63,9 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="View All Remaining Bills"
+        android:text="@string/view_all_remaining_bills"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <!-- also delete values from all related entries-->
 
@@ -76,8 +76,8 @@
         android:layout_gravity="center"
         android:onClick="onClick"
         android:padding="15dp"
-        android:text="Delete User"
+        android:text="@string/delete_user"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
 </LinearLayout>

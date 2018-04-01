@@ -11,13 +11,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center_horizontal"
-        android:text="Current Patients"
-        android:textSize="25dp" />
+        android:text="@string/current_patients"
+        android:textSize="25sp" />
 
     <ListView
         android:id="@+id/lv_current_patients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="#2f2f2f"
-        android:dividerHeight="0.5dp"></ListView>
+        android:dividerHeight="0.5dp" />
 </LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,8 +12,8 @@
         android:layout_margin="16dp"
         android:layout_weight="42"
         android:gravity="center_horizontal"
-        android:text="Your Specialization"
-        android:textSize="25dp" />
+        android:text="@string/your_specialization"
+        android:textSize="25sp" />
 
     <ListView
         android:id="@+id/lv_specialization"
@@ -20,28 +21,29 @@
         android:layout_height="match_parent"
         android:layout_weight="20"
         android:divider="#2f2f2f"
-        android:dividerHeight="0.5dp">
-    </ListView>
+        android:dividerHeight="0.5dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_weight="38"
-        >
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/et_spl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:inputType="textAutoComplete"
+            tools:ignore="LabelFor" />
+
         <Button
-            android:onClick="onClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:text="Add Specialization" />
+            android:onClick="onClick"
+            android:text="@string/add_specialization" />
     </LinearLayout>
 </LinearLayout>
