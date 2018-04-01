@@ -8,20 +8,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Personal Details"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
         android:layout_marginBottom="20dp"
-        />
+        android:gravity="center_horizontal"
+        android:text="Personal Details"
+        android:textSize="20sp" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -41,7 +40,7 @@
                     android:textSize="17dp"
                     android:textStyle="bold" />
 
-                                                                                                                            <TextView
+                <TextView
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -351,9 +350,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
-                android:text="Update"
                 android:onClick="onClick"
-                />
+                android:text="Update" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
