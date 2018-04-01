@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.hospitalmanagementsystem.Doctor.Doctor_Patient.Write_Report">
+    tools:context="com.example.hospitalmanagementsystem.doctor.doctor_patient.Write_Report">
 
     <TextView
         android:layout_width="match_parent"

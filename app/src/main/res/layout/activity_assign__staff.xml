@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.hospitalmanagementsystem.Desktop_Admin.Assign_Staff">
+    tools:context="com.example.hospitalmanagementsystem.desktop_admin.Assign_Staff">
 
     <TextView
         android:layout_width="match_parent"

@@ -10,10 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.hospitalmanagementsystem.Desktop_Admin.Desktop_Admin;
-import com.example.hospitalmanagementsystem.Doctor.Doctor;
-import com.example.hospitalmanagementsystem.Patient.Patient;
-import com.example.hospitalmanagementsystem.Staff_Member.Staff_Member;
+import com.example.hospitalmanagementsystem.desktop_admin.Desktop_Admin;
+import com.example.hospitalmanagementsystem.doctor.Doctor;
+import com.example.hospitalmanagementsystem.patient.Patient;
+import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,21 +36,21 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.register);
 
         //DEFINING ALL VIEWS
-        fname = (EditText) findViewById(R.id.etfname);
-        lname = (EditText) findViewById(R.id.etlname);
-        age = (EditText) findViewById(R.id.etage);
-        dd = (EditText) findViewById(R.id.etdd);
-        yy = (EditText) findViewById(R.id.etyy);
-        city = (EditText) findViewById(R.id.etcity);
-        pincode = (EditText) findViewById(R.id.etpin);
-        mobno = (EditText) findViewById(R.id.etmobile);
-        uname = (EditText) findViewById(R.id.etusername);
-        password = (EditText) findViewById(R.id.etpassword);
-        register = (Button) findViewById(R.id.bregister);
-        usertype = (Spinner) findViewById(R.id.spinnerusertype);
-        mm = (Spinner) findViewById(R.id.spinnermonth);
-        sex = (Spinner) findViewById(R.id.spinnersex);
-        bgroup = (Spinner) findViewById(R.id.spinnerbgroup);
+        fname = findViewById(R.id.etfname);
+        lname = findViewById(R.id.etlname);
+        age = findViewById(R.id.etage);
+        dd = findViewById(R.id.etdd);
+        yy = findViewById(R.id.etyy);
+        city = findViewById(R.id.etcity);
+        pincode = findViewById(R.id.etpin);
+        mobno = findViewById(R.id.etmobile);
+        uname = findViewById(R.id.etusername);
+        password = findViewById(R.id.etpassword);
+        register = findViewById(R.id.bregister);
+        usertype = findViewById(R.id.spinnerusertype);
+        mm = findViewById(R.id.spinnermonth);
+        sex = findViewById(R.id.spinnersex);
+        bgroup = findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);
 
         //SET UP THE SPINNER DROOPDOWN

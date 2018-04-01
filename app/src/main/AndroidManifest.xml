@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hospitalmanagementsystem">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -41,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.Patient"
+            android:name=".patient.Patient"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.Doctor"
+            android:name=".doctor.Doctor"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,7 +60,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Desktop_Admin.Desktop_Admin"
+            android:name=".desktop_admin.Desktop_Admin"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +69,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Staff_Member.Staff_Member"
+            android:name=".staff_member.Staff_Member"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,7 +87,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.Specialization"
+            android:name=".doctor.Specialization"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -95,7 +96,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.Leaves.Leaves"
+            android:name=".doctor.leaves.Leaves"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -104,7 +105,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.Doctor_Patient.Report_Upload"
+            android:name=".doctor.doctor_patient.Report_Upload"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -122,7 +123,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.Leaves.View_Leaves"
+            android:name=".doctor.leaves.View_Leaves"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -131,7 +132,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.D_Slot"
+            android:name=".doctor.D_Slot"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -140,7 +141,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.Appointment"
+            android:name=".patient.Appointment"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -149,7 +150,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.New_Appointment"
+            android:name=".patient.New_Appointment"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -158,7 +159,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.Wait_Appointment"
+            android:name=".patient.Wait_Appointment"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -167,7 +168,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.Confirmed_Appointment"
+            android:name=".patient.Confirmed_Appointment"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -176,7 +177,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.Select_Doctor"
+            android:name=".patient.Select_Doctor"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -185,7 +186,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.Apply"
+            android:name=".patient.Apply"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -194,7 +195,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Desktop_Admin.Grant_appointment"
+            android:name=".desktop_admin.Grant_appointment"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -203,7 +204,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.Doctor_Patient.Write_Report"
+            android:name=".doctor.doctor_patient.Write_Report"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -212,7 +213,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.View_Report.View_Report"
+            android:name=".patient.view_report.View_Report"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -221,7 +222,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.View_Report.Final_View_Report"
+            android:name=".patient.view_report.Final_View_Report"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -230,7 +231,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Patient.Bills"
+            android:name=".patient.Bills"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -239,7 +240,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Desktop_Admin.Remaining_patient_bills"
+            android:name=".desktop_admin.Remaining_patient_bills"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -248,7 +249,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Staff_Member.Assigned_Doctors"
+            android:name=".staff_member.Assigned_Doctors"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -257,7 +258,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Doctor.View_Assigned_Staff"
+            android:name=".doctor.View_Assigned_Staff"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -266,7 +267,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Desktop_Admin.Assign_Staff"
+            android:name=".desktop_admin.Assign_Staff"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -284,8 +285,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Desktop_Admin.Delete_Users"
-            android:screenOrientation="portrait">
+            android:name=".desktop_admin.Delete_Users"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -310,7 +312,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Splash"></activity>
+        <activity android:name=".Splash" />
     </application>
 
 </manifest>

@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.hospitalmanagementsystem.Desktop_Admin.Desktop_Admin;
-import com.example.hospitalmanagementsystem.Doctor.Doctor;
-import com.example.hospitalmanagementsystem.Patient.Patient;
-import com.example.hospitalmanagementsystem.Staff_Member.Staff_Member;
+import com.example.hospitalmanagementsystem.desktop_admin.Desktop_Admin;
+import com.example.hospitalmanagementsystem.doctor.Doctor;
+import com.example.hospitalmanagementsystem.patient.Patient;
+import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
 
 /**
  * Created by Neeraj on 17-Mar-16.
@@ -28,10 +28,10 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        username = (EditText) findViewById(R.id.etusername);
-        password = (EditText) findViewById(R.id.etpassword);
-        Bregister = (Button) findViewById(R.id.bregister);
-        Blogin = (Button) findViewById(R.id.blogin);
+        username = findViewById(R.id.etusername);
+        password = findViewById(R.id.etpassword);
+        Bregister = findViewById(R.id.bregister);
+        Blogin = findViewById(R.id.blogin);
         dbh = new DatabaseHelper(this);
 
         Bregister.setOnClickListener(new View.OnClickListener() {
