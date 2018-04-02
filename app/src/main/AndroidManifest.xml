@@ -8,11 +8,11 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:fullBackupContent="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
@@ -316,9 +316,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:label="Home"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientNavigation"
+            android:label="@string/title_activity_patient_navigation"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
