@@ -24,8 +24,9 @@
     <string name="the_different_modules_covered_in_this_app_are_doctors_patients_staff_members_desktop_admin">The different modules covered in this app are: Doctors, Patients, Staff members, Desktop_admin</string>
     <string name="this_app_is_used_to_create_a_system_to_manage_all_the_operations_associated_with_a_hospital_the_different_modules_covered_in_this_app_are">This app is used to create a system to manage all the operations associated with a Hospital. THe different modules covered in this app are:</string>
     <string name="select_to_apply_for_appointment">Select to Apply For Appointment</string>
-    <string name="login_or_register">Login or Register</string>
-    <string name="services_provided">Services Provided</string>
+    <string name="login_or_register">Patient Login</string>
+    <string name="services_provided">Staff Login</string>
+    <string name="admin">Admin Login</string>
     <string name="current_patients">Current Patients</string>
     <string name="reports">Reports</string>
     <string name="approved">Approved</string>
@@ -54,7 +55,7 @@
     <string name="set_your_referrel_timings">Set Your Referrel Timings</string>
     <string name="apply_view_leaves">Apply/View Leaves</string>
     <string name="add_view_specializations">Add/View Specializations</string>
-    <string name="doctors_available">Doctors Available</string>
+    <string name="doctors_available">Doctors Login</string>
     <string name="patient_with_unpaid_bills">Patient with unpaid Bills</string>
     <string name="dd">dd</string>
     <string name="yyyy">yyyy</string>
