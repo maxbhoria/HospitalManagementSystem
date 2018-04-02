@@ -1,8 +1,5 @@
 package com.example.hospitalmanagementsystem;
 
-/**
- * Created by Neeraj on 08-Apr-16.
- */
 public class RowItem {
     private String d_name;
     private String p_name;

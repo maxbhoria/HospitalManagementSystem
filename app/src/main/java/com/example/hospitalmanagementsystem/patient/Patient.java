@@ -13,9 +13,6 @@ import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 import com.example.hospitalmanagementsystem.patient.view_report.View_Report;
 
-/**
- * Created by Neeraj on 17-Mar-16.
- */
 public class Patient extends AppCompatActivity {
 
     String username, password, user_type;

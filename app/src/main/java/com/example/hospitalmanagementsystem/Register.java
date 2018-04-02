@@ -21,9 +21,6 @@ import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Neeraj on 17-Mar-16.
- */
 public class Register extends AppCompatActivity {
 
     EditText fname, lname, age, dd, yy, city, pincode, mobno, uname, password;

@@ -14,9 +14,7 @@ import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 
-/**
- * Created by Neeraj on 17-Mar-16.
- */
+
 public class Doctor extends AppCompatActivity {
 
     String username,password,user_type;

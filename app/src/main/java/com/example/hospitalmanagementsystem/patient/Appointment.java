@@ -7,10 +7,6 @@ import android.view.View;
 
 import com.example.hospitalmanagementsystem.R;
 
-
-/**
- * Created by Neeraj on 07-Apr-16.
- */
 public class Appointment extends AppCompatActivity {
 
     String username,password,user_type;

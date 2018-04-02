@@ -11,9 +11,6 @@ import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Message;
 import com.example.hospitalmanagementsystem.R;
 
-/**
- * Created by Neeraj on 08-Apr-16.
- */
 public class Write_Report extends AppCompatActivity {
 
     String username, password, user_type, p_username, p_password, problem, rp, fee;

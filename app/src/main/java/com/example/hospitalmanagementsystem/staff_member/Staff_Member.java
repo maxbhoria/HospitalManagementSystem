@@ -12,9 +12,6 @@ import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 
-/**
- * Created by Neeraj on 20-Mar-16.
- */
 public class Staff_Member extends AppCompatActivity {
     String username, password, user_type;
     DatabaseHelper dbh;

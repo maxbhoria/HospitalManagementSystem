@@ -18,9 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by Neeraj on 07-Apr-16.
- */
+
 public class New_Appointment extends AppCompatActivity {
 
     String username, password, user_type, spl, slt, hs, he, ss;

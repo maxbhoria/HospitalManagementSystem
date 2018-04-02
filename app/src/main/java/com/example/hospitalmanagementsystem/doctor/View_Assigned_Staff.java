@@ -12,9 +12,6 @@ import com.example.hospitalmanagementsystem.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Neeraj on 09-Apr-16.
- */
 public class View_Assigned_Staff extends AppCompatActivity {
 
     String username, password, user_type;

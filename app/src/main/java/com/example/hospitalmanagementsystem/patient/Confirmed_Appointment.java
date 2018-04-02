@@ -6,9 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.hospitalmanagementsystem.R;
 
 
-/**
- * Created by Neeraj on 07-Apr-16.
- */
 public class Confirmed_Appointment extends AppCompatActivity {
 
     String username,password,user_type;

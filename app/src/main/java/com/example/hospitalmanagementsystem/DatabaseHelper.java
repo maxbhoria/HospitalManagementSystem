@@ -7,9 +7,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Neeraj on 18-Mar-16.
- */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;

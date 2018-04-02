@@ -7,9 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-/**
- * Created by Neeraj on 01-Apr-16.
- */
 public class Personal_Info extends AppCompatActivity {
 
     String username,password,user_type;

@@ -14,9 +14,7 @@ import com.example.hospitalmanagementsystem.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Neeraj on 02-Apr-16.
- */
+
 public class Specialization extends AppCompatActivity {
 
     ListView lvs;

@@ -16,9 +16,6 @@ import com.example.hospitalmanagementsystem.R;
 import java.util.ArrayList;
 import java.util.Map;
 
-/**
- * Created by Neeraj on 02-Apr-16.
- */
 public class Report_Upload extends AppCompatActivity {
 
     String username, password, user_type;

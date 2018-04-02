@@ -16,9 +16,6 @@ import com.example.hospitalmanagementsystem.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Neeraj on 08-Apr-16.
- */
 public class Select_Doctor extends AppCompatActivity {
 
     String username, password, user_type, specialization, slot, ss, name, hs, he;

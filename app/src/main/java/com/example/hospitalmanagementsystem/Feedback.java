@@ -10,9 +10,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-/**
- * Created by Neeraj on 02-Apr-16.
- */
 public class Feedback extends AppCompatActivity {
 
     ListView lv_feed;

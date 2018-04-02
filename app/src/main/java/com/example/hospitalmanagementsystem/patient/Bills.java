@@ -12,9 +12,7 @@ import com.example.hospitalmanagementsystem.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Neeraj on 08-Apr-16.
- */
+
 public class Bills extends AppCompatActivity {
 
     String username, password, user_type;
