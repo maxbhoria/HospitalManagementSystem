@@ -84,7 +84,7 @@
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinnersex"
+                    android:id="@+id/spinnerSex"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="50"
@@ -116,7 +116,7 @@
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinnermonth"
+                    android:id="@+id/spinnerMonth"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="27"

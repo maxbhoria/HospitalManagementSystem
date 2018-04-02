@@ -1,7 +1,6 @@
 package com.example.hospitalmanagementsystem;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,20 +11,20 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper databaseHelper;
     Toolbar toolbar;
-    Button Bloginregister;
+    Button bLogInRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //SET UP THE DATABASE
         databaseHelper = new DatabaseHelper(this);
-        SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
-        Bloginregister = (Button) findViewById(R.id.bloginregister);
-        Bloginregister.setOnClickListener(new View.OnClickListener() {
+        //SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
+        bLogInRegister = findViewById(R.id.bloginregister);
+        bLogInRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, Login.class);

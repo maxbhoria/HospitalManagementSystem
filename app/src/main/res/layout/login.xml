@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.v7.widget.Toolbar>
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,7 +62,8 @@
             android:layout_gravity="center"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:text="@string/login" />
+            android:text="@string/login"
+            android:background="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -81,6 +82,7 @@
             android:layout_marginTop="15dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="@string/register" />
+            android:text="@string/register"
+            android:background="@color/colorPrimary"/>
     </LinearLayout>
 </LinearLayout>

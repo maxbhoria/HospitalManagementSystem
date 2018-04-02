@@ -46,8 +46,8 @@ public class Update extends AppCompatActivity {
         uname = (EditText) findViewById(R.id.etusername);
         password = (EditText) findViewById(R.id.etpassword);
         register = (Button) findViewById(R.id.bregister);
-        mm = (Spinner) findViewById(R.id.spinnermonth);
-        sex = (Spinner) findViewById(R.id.spinnersex);
+        mm = (Spinner) findViewById(R.id.spinnerMonth);
+        sex = (Spinner) findViewById(R.id.spinnerSex);
         usertype = (Spinner) findViewById(R.id.spinnerusertype);
         bgroup = (Spinner) findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);

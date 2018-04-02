@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:fullBackupContent="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".Splash"
             android:screenOrientation="portrait">

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.v7.widget.Toolbar>
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +44,6 @@
             android:textSize="17sp" />
 
         <Button
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -55,4 +54,5 @@
             android:textAllCaps="false"
             android:textSize="17sp" />
     </LinearLayout>
+
 </LinearLayout>

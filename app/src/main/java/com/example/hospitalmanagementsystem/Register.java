@@ -52,8 +52,8 @@ public class Register extends AppCompatActivity {
         password = findViewById(R.id.etpassword);
         register = findViewById(R.id.bregister);
         usertype = findViewById(R.id.spinnerusertype);
-        mm = findViewById(R.id.spinnermonth);
-        sex = findViewById(R.id.spinnersex);
+        mm = findViewById(R.id.spinnerMonth);
+        sex = findViewById(R.id.spinnerSex);
         bgroup = findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);
 
