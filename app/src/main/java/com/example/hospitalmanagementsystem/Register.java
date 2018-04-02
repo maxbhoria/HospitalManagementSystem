@@ -1,7 +1,9 @@
 package com.example.hospitalmanagementsystem;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -108,6 +110,7 @@ public class Register extends AppCompatActivity {
         bgroup.setAdapter(adapterb);
 
         register.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
 
@@ -164,7 +167,7 @@ public class Register extends AppCompatActivity {
 
                             i.putExtras(bb);
                             startActivity(i);
-                            finish();
+                            finishAffinity();
                         }
                     }
                 }

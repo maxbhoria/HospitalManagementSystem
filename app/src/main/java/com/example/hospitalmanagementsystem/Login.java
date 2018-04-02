@@ -1,7 +1,9 @@
 package com.example.hospitalmanagementsystem;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,9 +16,6 @@ import com.example.hospitalmanagementsystem.doctor.Doctor;
 import com.example.hospitalmanagementsystem.patient.Patient;
 import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
 
-/**
- * Created by Neeraj on 17-Mar-16.
- */
 public class Login extends AppCompatActivity {
 
     EditText username, password;
@@ -46,6 +45,7 @@ public class Login extends AppCompatActivity {
         });
 
         Blogin.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
                 usernames = username.getText().toString();
@@ -75,6 +75,7 @@ public class Login extends AppCompatActivity {
 
                     i.putExtras(b);
                     startActivity(i);
+                    finishAffinity();
                 } else {
                     Message.message(Login.this, "No Such User Exists");
                     Message.message(Login.this, "Please Register Your self");
