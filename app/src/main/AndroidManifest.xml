@@ -321,7 +321,7 @@
             android:label="Home"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PatientNavigation"
+            android:name=".patient.PatientNavigation"
             android:label="@string/title_activity_patient_navigation"
             android:theme="@style/AppTheme"></activity>
     </application>

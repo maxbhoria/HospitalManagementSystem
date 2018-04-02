@@ -13,6 +13,7 @@ import android.widget.EditText;
 
 import com.example.hospitalmanagementsystem.desktop_admin.Desktop_Admin;
 import com.example.hospitalmanagementsystem.doctor.Doctor;
+import com.example.hospitalmanagementsystem.patient.PatientNavigation;
 import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
 
 public class Login extends AppCompatActivity {
