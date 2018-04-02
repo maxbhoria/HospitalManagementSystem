@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Neeraj on 08-Apr-16.
- */
 public class CustomListViewAdapter extends ArrayAdapter<RowItem> {
 
     Context context;

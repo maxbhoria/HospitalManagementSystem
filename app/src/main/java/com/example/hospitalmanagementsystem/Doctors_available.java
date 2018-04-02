@@ -1,20 +1,20 @@
 package com.example.hospitalmanagementsystem;
 
-import android.database.Cursor;
+    import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.widget.ArrayAdapter;
+    import android.support.v7.widget.Toolbar;
+    import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Doctors_available extends AppCompatActivity {
+    public class Doctors_available extends AppCompatActivity {
 
     ListView lv_avail;
     ArrayList<String> dname = new ArrayList<>();
     DatabaseHelper db = new DatabaseHelper(this);
-    Toolbar toolbar;
+        Toolbar toolbar;
 
 
     @Override

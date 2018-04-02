@@ -29,11 +29,12 @@ public class View_Report extends AppCompatActivity {
         setContentView(R.layout.activity_view__report);
 
         Bundle bb = getIntent().getExtras();
+        assert bb != null;
         username = bb.getString("username");
         password = bb.getString("password");
         user_type = bb.getString("user_type");
 
-        lv_report = (ListView) findViewById(R.id.lv_reports);
+        lv_report = findViewById(R.id.lv_reports);
         Cursor y = dbh.checkduplicates_in_user_credentials(username, password, "patient_identify");
 
         if (y.moveToFirst()) {

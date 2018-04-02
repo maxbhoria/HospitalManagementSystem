@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.hospitalmanagementsystem.R;
 
-
 public class Wait_Appointment extends AppCompatActivity {
 
     String username,password,user_type;
@@ -16,6 +15,7 @@ public class Wait_Appointment extends AppCompatActivity {
         setContentView(R.layout.wait_appointment);
 
         Bundle bb = getIntent().getExtras();
+        assert bb != null;
         username = bb.getString("username");
         password = bb.getString("password");
         user_type = bb.getString("user_type");

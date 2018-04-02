@@ -16,7 +16,6 @@ import com.example.hospitalmanagementsystem.RowItem;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Grant_appointment extends AppCompatActivity {
 
     ListView lv_appointment;

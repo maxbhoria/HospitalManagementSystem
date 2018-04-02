@@ -39,7 +39,7 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 try {
                     Thread.sleep(3000);
-                } catch (Exception e) {
+                } catch (Exception ignored) {
                 }
                 Intent i = new Intent(Splash.this, MainActivity.class);
                 startActivity(i);
@@ -50,14 +50,14 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        delayedHide(100);
+        delayedHide();
     }
     private void hide() {
         // Hide UI first
         mHideHandler.postDelayed(mHidePart2Runnable, UI_ANIMATION_DELAY);
     }
-    private void delayedHide(int delayMillis) {
+    private void delayedHide() {
         mHideHandler.removeCallbacks(mHideRunnable);
-        mHideHandler.postDelayed(mHideRunnable, delayMillis);
+        mHideHandler.postDelayed(mHideRunnable, 100);
     }
 }

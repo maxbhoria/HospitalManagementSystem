@@ -37,7 +37,6 @@ public class Select_Doctor extends AppCompatActivity {
         specialization = bb.getString("specialization");
         slot = bb.getString("slot");
 
-
         //SELECTING RANGE FOR SLOT
         if (slot.charAt(0) == 'M') {
             r1 = 9;

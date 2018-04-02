@@ -13,10 +13,10 @@ public class Final_View_Report extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_view_report);
         Bundle bb = getIntent().getExtras();
+        assert bb != null;
         String report = bb.getString("report");
-        TextView final_report = (TextView) findViewById(R.id.tv_report);
+        TextView final_report = findViewById(R.id.tv_report);
         final_report.setText(report);
-
 
     }
 }

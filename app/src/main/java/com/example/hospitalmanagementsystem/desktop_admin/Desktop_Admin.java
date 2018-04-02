@@ -11,8 +11,6 @@ import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 
-
-
 public class Desktop_Admin extends AppCompatActivity {
     String username,password,user_type;
     DatabaseHelper dbh;

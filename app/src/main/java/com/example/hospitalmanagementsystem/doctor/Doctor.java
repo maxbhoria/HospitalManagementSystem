@@ -1,5 +1,6 @@
 package com.example.hospitalmanagementsystem.doctor;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -14,23 +15,24 @@ import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 
-
 public class Doctor extends AppCompatActivity {
 
     String username,password,user_type;
     DatabaseHelper dbh;
     TextView dname;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doctor);
 
         dbh = new DatabaseHelper(this);
-        dname = (TextView) findViewById(R.id.tv_d_name);
+        dname = findViewById(R.id.tv_d_name);
 
 
         Bundle bb = getIntent().getExtras();
+        assert bb != null;
         username = bb.getString("username");
         password = bb.getString("password");
         user_type = bb.getString("user_type");

@@ -11,7 +11,6 @@ import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Message;
 import com.example.hospitalmanagementsystem.R;
 
-
 public class Apply extends AppCompatActivity {
     String username, password, d_username, d_password, problem;
     TextView name, s_start, s_end;

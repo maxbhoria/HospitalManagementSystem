@@ -27,6 +27,7 @@ public class Staff_Member extends AppCompatActivity {
 
 
         Bundle bb = getIntent().getExtras();
+        assert bb != null;
         username = bb.getString("username");
         password = bb.getString("password");
         user_type = bb.getString("user_type");

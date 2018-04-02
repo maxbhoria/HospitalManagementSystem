@@ -14,7 +14,6 @@ import com.example.hospitalmanagementsystem.R;
 
 import java.util.ArrayList;
 
-
 public class Delete_Users extends AppCompatActivity {
 
     ListView lv_all;
