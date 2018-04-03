@@ -13,6 +13,7 @@ import android.widget.EditText;
 
 import com.example.hospitalmanagementsystem.desktop_admin.Desktop_Admin;
 import com.example.hospitalmanagementsystem.doctor.Doctor;
+import com.example.hospitalmanagementsystem.patient.Patient;
 import com.example.hospitalmanagementsystem.patient.PatientNavigation;
 import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
 
@@ -28,7 +29,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         username = findViewById(R.id.etusername);
         password = findViewById(R.id.etpassword);
@@ -66,7 +67,7 @@ public class Login extends AppCompatActivity {
                     if (ut.equals("Doctor")) {
                         i = new Intent(Login.this, Doctor.class);
                     } else if (ut.equals("Patient")) {
-                        i = new Intent(Login.this, PatientNavigation.class);
+                        i = new Intent(Login.this, Patient.class);
                     } else if (ut.equals("Staff Member")) {
                         i = new Intent(Login.this, Staff_Member.class);
                     } else {

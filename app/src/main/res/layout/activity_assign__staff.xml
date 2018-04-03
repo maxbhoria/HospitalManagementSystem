@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/hospital"
     tools:context="com.example.hospitalmanagementsystem.desktop_admin.Assign_Staff">
 
     <TextView
@@ -52,5 +54,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
+        android:background="@color/colorPrimary"
         android:text="@string/assign" />
 </LinearLayout>

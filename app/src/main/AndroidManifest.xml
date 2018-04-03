@@ -11,6 +11,7 @@
         android:fullBackupContent="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -323,6 +324,18 @@
         <activity
             android:name=".patient.PatientNavigation"
             android:label="@string/title_activity_patient_navigation"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".staff_member.StaffNavigation"
+            android:label="@string/title_activity_staff_navigation"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".doctor.DoctorNavigation"
+            android:label="@string/title_activity_doctor_navigation"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".desktop_admin.AdminNavigation"
+            android:label="@string/title_activity_admin_navigation"
             android:theme="@style/AppTheme"></activity>
     </application>
 

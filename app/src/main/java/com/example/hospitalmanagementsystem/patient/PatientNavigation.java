@@ -1,7 +1,9 @@
 package com.example.hospitalmanagementsystem.patient;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -13,21 +15,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
+import com.example.hospitalmanagementsystem.DatabaseHelper;
+import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.MainActivity;
+import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
+import com.example.hospitalmanagementsystem.patient.view_report.View_Report;
 
-public class PatientNavigation extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
+public class PatientNavigation extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    String username, password, user_type;
+    DatabaseHelper dbh;
+    TextView pname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_navigation);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,19 +44,19 @@ public class PatientNavigation extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -58,49 +66,118 @@ public class PatientNavigation extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.patient_navigation, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id1 = item.getItemId();
+        Bundle b = new Bundle();
+        b.putString("username", username);
+        b.putString("password", password);
+        b.putString("user_type", user_type);
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        Intent i=new Intent();
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        switch (id1) {
+            case R.id.pat_profile:
+                i = new Intent(PatientNavigation.this, Personal_Info.class);
+                break;
+            case R.id.pat_appointment:
+                i = new Intent(PatientNavigation.this, Appointment.class);
+                break;
+            case R.id.pat_reports:
+                i = new Intent(PatientNavigation.this, View_Report.class);
+                break;
+            case R.id.pat_bills:
+                i = new Intent(PatientNavigation.this, Bills.class);
+                break;
+            case R.id.pat_feedback:
+                i = new Intent(PatientNavigation.this, Feedback.class);
+                break;
         }
-        else if (id == R.id.nav_logout) {
-            Intent intent=new Intent(PatientNavigation.this, MainActivity.class);
+
+        i.putExtras(b);
+        startActivity(i);
+/*
+        i.putExtras(b);
+        startActivity(i);
+        if (id == R.id.pat_appointment) {
+            Intent intent = new Intent(PatientNavigation.this, Appointment.class);
+            intent.putExtras(b);
             startActivity(intent);
             finish();
-        }
+        } else if (id == R.id.pat_reports) {
+            Intent i2 = new Intent(PatientNavigation.this, View_Report.class);
+            i2.putExtras(b);
+            startActivity(i2);
+            finish();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        } else if (id == R.id.pat_bills) {
+            Intent i3 = new Intent(PatientNavigation.this, Bills.class);
+            i3.putExtras(b);
+            startActivity(i3);
+            finish();
+
+        } else if (id == R.id.pat_feedback) {
+            Intent i4 = new Intent(PatientNavigation.this, Feedback.class);
+            i4.putExtras(b);
+            startActivity(i4);
+            finish();
+        } else if (id == R.id.pat_profile) {
+            Intent i5 = new Intent(PatientNavigation.this, Personal_Info.class);
+            i5.putExtras(b);
+            startActivity(i5);
+            finish();
+        } else if (id == R.id.pat_logout) {
+            Intent i6 = new Intent(PatientNavigation.this, MainActivity.class);
+            i6.putExtras(b);
+            startActivity(i6);
+            finish();
+        }
+*/
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
     }
 }

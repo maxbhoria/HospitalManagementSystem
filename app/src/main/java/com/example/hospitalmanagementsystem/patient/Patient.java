@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Feedback;
+import com.example.hospitalmanagementsystem.Login;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 import com.example.hospitalmanagementsystem.patient.view_report.View_Report;
@@ -18,6 +19,7 @@ public class Patient extends AppCompatActivity {
     String username, password, user_type;
     DatabaseHelper dbh;
     TextView pname;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,6 @@ public class Patient extends AppCompatActivity {
 
     public void onClick(View view) {
 
-        Intent i;
         Bundle b = new Bundle();
         b.putString("username", username);
         b.putString("password", password);
@@ -63,8 +64,11 @@ public class Patient extends AppCompatActivity {
             case R.id.b_p_bills:
                 i = new Intent(Patient.this, Bills.class);
                 break;
-            default:
+            case R.id.b_p_feedback:
                 i = new Intent(Patient.this, Feedback.class);
+                break;
+            case R.id.b_p_logout:
+                i = new Intent(Patient.this, Login.class);
                 break;
         }
 

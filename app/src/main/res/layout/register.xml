@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.hospitalmanagementsystem.MainActivity">
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/toolbar"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="com.example.hospitalmanagementsystem.MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessParent">
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,18 +139,14 @@
                     android:inputType="date"
                     android:textSize="20sp" />
 
-
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-
                 android:orientation="horizontal"
                 android:weightSum="100">
-
 
                 <Spinner
                     android:id="@+id/spinnerbgroup"
@@ -168,15 +164,12 @@
                     android:background="@android:drawable/btn_dropdown"
                     android:spinnerMode="dropdown" />
 
-
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-
                 android:orientation="horizontal"
                 android:weightSum="100">
 
@@ -208,41 +201,56 @@
                     tools:ignore="TextFields" />
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/etmobile"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                android:hint="@string/mobile_no"
-                android:inputType="phone"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/etusername"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                android:hint="@string/username"
-                android:inputType="text"
-                android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/etmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:hint="@string/mobile_no"
+                    android:inputType="phone"
+                    android:textSize="20sp" />
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
-                android:id="@+id/etpassword"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:hint="@string/username"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textSize="20sp" />
+            </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/bregister"
@@ -253,5 +261,5 @@
                 android:paddingRight="30dp"
                 android:text="@string/register" />
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

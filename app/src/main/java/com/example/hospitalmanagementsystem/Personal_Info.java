@@ -22,19 +22,19 @@ public class Personal_Info extends AppCompatActivity {
         Bundle bb = getIntent().getExtras();
         username = bb.getString("username");
         password = bb.getString("password");
-        user_type = bb.getString("password");
+        user_type = bb.getString("user_type");
 
-        name = (TextView) findViewById(R.id.name);
-        age = (TextView) findViewById(R.id.age);
-        sex = (TextView) findViewById(R.id.sex);
-        dob = (TextView) findViewById(R.id.dob);
-        bgroup = (TextView) findViewById(R.id.bgroup);
-        utype = (TextView) findViewById(R.id.utype);
-        city = (TextView) findViewById(R.id.city);
-        pincode = (TextView) findViewById(R.id.pincode);
-        mobno = (TextView) findViewById(R.id.tv_mno);
-        uname = (TextView) findViewById(R.id.username);
-        pword = (TextView) findViewById(R.id.password);
+        name = findViewById(R.id.name);
+        age = findViewById(R.id.age);
+        sex = findViewById(R.id.sex);
+        dob = findViewById(R.id.dob);
+        bgroup = findViewById(R.id.bgroup);
+        utype = findViewById(R.id.utype);
+        city = findViewById(R.id.city);
+        pincode = findViewById(R.id.pincode);
+        mobno = findViewById(R.id.tv_mno);
+        uname = findViewById(R.id.username);
+        pword = findViewById(R.id.password);
 
         Cursor y = db.checkduplicates_in_user_credentials(username, password, getResources().getString(R.string.user_credentials));
 
@@ -42,7 +42,7 @@ public class Personal_Info extends AppCompatActivity {
             String name1 = y.getString(1);
             String name2 = y.getString(2);
 
-            name.setText(name1+" "+name2);
+            name.setText(name1 + " " + name2);
             age.setText(y.getString(3));
             sex.setText(y.getString(6));
             dob.setText(y.getString(5));

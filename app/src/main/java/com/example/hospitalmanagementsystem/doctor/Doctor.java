@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hospitalmanagementsystem.DatabaseHelper;
+import com.example.hospitalmanagementsystem.Login;
 import com.example.hospitalmanagementsystem.doctor.doctor_patient.Report_Upload;
 import com.example.hospitalmanagementsystem.doctor.leaves.Leaves;
 import com.example.hospitalmanagementsystem.Feedback;
@@ -19,7 +21,8 @@ public class Doctor extends AppCompatActivity {
 
     String username,password,user_type;
     DatabaseHelper dbh;
-    TextView dname;
+    TextView dname;        Intent i;
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -47,7 +50,6 @@ public class Doctor extends AppCompatActivity {
 
     public void onClick(View view){
 
-        Intent i;
         Bundle b = new Bundle();
         b.putString("username",username);
         b.putString("password",password);
@@ -73,8 +75,12 @@ public class Doctor extends AppCompatActivity {
             case R.id.b_d_slot:
                 i = new Intent(Doctor.this, D_Slot.class);
                 break;
-            default:
+            case R.id.b_d_feedback:
                 i = new Intent(Doctor.this, Feedback.class);
+                break;
+            case R.id.b_d_logout:
+                i = new Intent(Doctor.this, Login.class);
+                Toast.makeText(this," Log out Successfully ",Toast.LENGTH_SHORT).show();
                 break;
         }
         i.putExtras(b);

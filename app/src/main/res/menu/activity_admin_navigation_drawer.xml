@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_admin_pInfo"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Personal Info" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Grant Patient Appointment" />
+        <item
+            android:id="@+id/nav_admin_assign"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Assign Staff" />
+        <item
+            android:id="@+id/nav_admin_Remaining_bills"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="View All Remaining Bills" />
+        <item
+            android:id="@+id/nav_admin_delete_user"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Delete User" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Log Out" />
+    </group>
+</menu>
