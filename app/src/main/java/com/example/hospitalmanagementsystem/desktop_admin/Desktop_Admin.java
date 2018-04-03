@@ -14,7 +14,7 @@ import com.example.hospitalmanagementsystem.R;
 public class Desktop_Admin extends AppCompatActivity {
     String username,password,user_type;
     DatabaseHelper dbh;
-    TextView daname;
+    TextView dAdminName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +22,11 @@ public class Desktop_Admin extends AppCompatActivity {
         setContentView(R.layout.desktop_admin);
 
         dbh = new DatabaseHelper(this);
-        daname = findViewById(R.id.tv_da_name);
+        dAdminName = findViewById(R.id.tv_da_name);
 
 
         Bundle bb = getIntent().getExtras();
+        assert bb != null;
         username = bb.getString("username");
         password = bb.getString("password");
         user_type = bb.getString("user_type");
@@ -34,7 +35,7 @@ public class Desktop_Admin extends AppCompatActivity {
 
         if (y.moveToFirst()) {
             String name = y.getString(1);
-            daname.setText(name);
+            dAdminName.setText(name);
         }
     }
 

@@ -35,7 +35,7 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //DEFINING ALL VIEWS
@@ -152,14 +152,19 @@ public class Register extends AppCompatActivity {
                             bb.putString("password", passwords);
                             bb.putString("user_type", utypes);
 
-                            if (utypes.equals("Patient")) {
-                                i = new Intent(Register.this, Patient.class);
-                            } else if (utypes.equals("Doctor")) {
-                                i = new Intent(Register.this, Doctor.class);
-                            } else if (utypes.equals("Staff Member")) {
-                                i = new Intent(Register.this, Staff_Member.class);
-                            } else {
-                                i = new Intent(Register.this, Desktop_Admin.class);
+                            switch (utypes) {
+                                case "Patient":
+                                    i = new Intent(Register.this, Patient.class);
+                                    break;
+                                case "Doctor":
+                                    i = new Intent(Register.this, Doctor.class);
+                                    break;
+                                case "Staff Member":
+                                    i = new Intent(Register.this, Staff_Member.class);
+                                    break;
+                                default:
+                                    i = new Intent(Register.this, Desktop_Admin.class);
+                                    break;
                             }
 
                             i.putExtras(bb);
