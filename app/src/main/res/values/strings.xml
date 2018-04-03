@@ -105,4 +105,5 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_doctor_navigation">DoctorNavigation</string>
     <string name="title_activity_admin_navigation">AdminNavigation</string>
+    <string name="map_api">AIzaSyCebaXhWtfKC8AeEHuFeqSMyiKPAVzDIb0</string>
 </resources>

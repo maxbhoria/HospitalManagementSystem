@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -33,6 +32,7 @@ import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Doctors_available;
 import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.Login;
+import com.example.hospitalmanagementsystem.NearHospitals;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 import com.example.hospitalmanagementsystem.patient.view_report.View_Report;
@@ -128,8 +128,8 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent=new Intent(PatientNavigation.this, NearHospitals.class);
+                startActivity(intent);
             }
         });
 
