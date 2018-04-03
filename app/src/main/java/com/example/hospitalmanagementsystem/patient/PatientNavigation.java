@@ -47,7 +47,7 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
     HashMap<String, Integer> Hash_file_maps;
     Button btn_help;
     TextView tv_address;
-
+//mohit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
