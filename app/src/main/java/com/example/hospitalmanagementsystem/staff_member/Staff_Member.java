@@ -49,7 +49,7 @@ public class Staff_Member extends AppCompatActivity {
         b.putString("user_type", user_type);
 
         switch (view.getId()) {
-            case R.id.b_s_info:
+            case R.id.nav_staff_PersonalInfo:
                 i = new Intent(Staff_Member.this, Personal_Info.class);
                 break;
             case R.id.b_s_assigned_doctor:

@@ -6,27 +6,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_admin_pInfo"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Personal Info " />
+            android:icon="@drawable/ic_action_person"
+            android:title="Personal Info" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/nav_admin_grant_appointment"
+            android:icon="@drawable/ic_action_appointments"
             android:title="Grant Patient Appointment" />
         <item
             android:id="@+id/nav_admin_assign"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_action_staff"
             android:title="Assign Staff" />
         <item
             android:id="@+id/nav_admin_Remaining_bills"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_action_bills"
             android:title="View All Remaining Bills" />
         <item
             android:id="@+id/nav_admin_delete_user"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_action_delete"
             android:title="Delete User" />
         <item
-            android:id="@+id/nav_send"
-            android:icon="@drawable/ic_menu_send"
+            android:id="@+id/nav_admin_logout"
+            android:icon="@drawable/ic_action_logout"
             android:title="Log Out" />
     </group>
 </menu>

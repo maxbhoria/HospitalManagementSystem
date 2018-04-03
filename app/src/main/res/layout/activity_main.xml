@@ -15,7 +15,7 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/hospital"
         android:gravity="center"
@@ -42,6 +42,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/patient"
                 android:src="@drawable/patient" />
         </LinearLayout>
 
@@ -56,6 +57,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/doctor"
                 android:src="@drawable/doctor" />
 
             <Button
@@ -79,6 +81,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/staff"
                 android:src="@drawable/staff" />
 
             <Button
@@ -112,6 +115,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/admin"
                 android:src="@drawable/admin" />
         </LinearLayout>
     </LinearLayout>

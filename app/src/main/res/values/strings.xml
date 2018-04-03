@@ -34,7 +34,7 @@
     <string name="write_report">Write Report</string>
     <string name="report">Report</string>
     <string name="submit_report">Submit Report</string>
-    <string name="doctor_info">Doctor Info</string>
+    <string name="doctor_info">Doctor Information</string>
     <string name="doctor_name">Doctor Name</string>
     <string name="i_fn">-</string>
     <string name="fees">Fees :</string>
@@ -106,4 +106,6 @@
     <string name="title_activity_doctor_navigation">DoctorNavigation</string>
     <string name="title_activity_admin_navigation">AdminNavigation</string>
     <string name="map_api">AIzaSyCebaXhWtfKC8AeEHuFeqSMyiKPAVzDIb0</string>
+    <string name="doctor">doctor</string>
+    <string name="patient">patient</string>
 </resources>

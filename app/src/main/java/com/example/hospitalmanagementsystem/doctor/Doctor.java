@@ -10,19 +10,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hospitalmanagementsystem.DatabaseHelper;
-import com.example.hospitalmanagementsystem.Login;
-import com.example.hospitalmanagementsystem.doctor.doctor_patient.Report_Upload;
-import com.example.hospitalmanagementsystem.doctor.leaves.Leaves;
 import com.example.hospitalmanagementsystem.Feedback;
+import com.example.hospitalmanagementsystem.Login;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
+import com.example.hospitalmanagementsystem.doctor.doctor_patient.Report_Upload;
+import com.example.hospitalmanagementsystem.doctor.leaves.Leaves;
 
 public class Doctor extends AppCompatActivity {
 
-    String username,password,user_type;
+    String username, password, user_type;
     DatabaseHelper dbh;
-    TextView dname;        Intent i;
-
+    TextView dname;
+    Intent i;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -33,30 +33,28 @@ public class Doctor extends AppCompatActivity {
         dbh = new DatabaseHelper(this);
         dname = findViewById(R.id.tv_d_name);
 
-
         Bundle bb = getIntent().getExtras();
         assert bb != null;
         username = bb.getString("username");
         password = bb.getString("password");
         user_type = bb.getString("user_type");
 
-        Cursor y = dbh.checkduplicates_in_user_credentials(username, password,getResources().getString(R.string.user_credentials));
+        Cursor y = dbh.checkduplicates_in_user_credentials(username, password, getResources().getString(R.string.user_credentials));
 
         if (y.moveToFirst()) {
             String name = y.getString(1);
-            dname.setText("Welcome Dr. "+name);
+            dname.setText("Welcome Dr. " + name);
         }
     }
 
-    public void onClick(View view){
+    public void onClick(View view) {
 
         Bundle b = new Bundle();
-        b.putString("username",username);
-        b.putString("password",password);
-        b.putString("user_type",user_type);
+        b.putString("username", username);
+        b.putString("password", password);
+        b.putString("user_type", user_type);
 
-        switch (view.getId())
-        {
+        switch (view.getId()) {
             case R.id.b_d_info:
                 i = new Intent(Doctor.this, Personal_Info.class);
                 break;
@@ -80,7 +78,7 @@ public class Doctor extends AppCompatActivity {
                 break;
             case R.id.b_d_logout:
                 i = new Intent(Doctor.this, Login.class);
-                Toast.makeText(this," Log out Successfully ",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, " Log out Successfully ", Toast.LENGTH_SHORT).show();
                 break;
         }
         i.putExtras(b);

@@ -1,5 +1,6 @@
 package com.example.hospitalmanagementsystem.staff_member;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -10,11 +11,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.example.hospitalmanagementsystem.Feedback;
+import com.example.hospitalmanagementsystem.MainActivity;
+import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 
 public class StaffNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Intent i;
+    String username, password, user_type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,12 @@ public class StaffNavigation extends AppCompatActivity
         setContentView(R.layout.activity_staff_navigation);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Bundle bb = getIntent().getExtras();
+        assert bb != null;
+        username = bb.getString("username");
+        password = bb.getString("password");
+        user_type = bb.getString("user_type");
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -45,24 +58,15 @@ public class StaffNavigation extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.staff_navigation, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -70,18 +74,46 @@ public class StaffNavigation extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Bundle b = new Bundle();
+        b.putString("username", username);
+        b.putString("password", password);
+        b.putString("user_type", user_type);
 
-        if (id == R.id.nav_staff_assignDoc) {
-            // Handle the camera action
-        } else if (id == R.id.nav_staff_PInfo) {
-
-        } else if (id == R.id.nav_staff_feedback) {
-
-        } else if (id == R.id.nav_staff_logout) {
+        switch (id) {
+            case R.id.nav_staff_PersonalInfo:
+                i = new Intent(StaffNavigation.this, Personal_Info.class);
+                break;
+            case R.id.nav_staff_assignDoc:
+                i = new Intent(StaffNavigation.this, Assigned_Doctors.class);
+                break;
+            case R.id.nav_staff_feedback:
+                i = new Intent(StaffNavigation.this, Feedback.class);
+                break;
+            case R.id.nav_staff_logout:
+                i = new Intent(StaffNavigation.this, MainActivity.class);
+                Toast.makeText(this, " Log out Successfully ", Toast.LENGTH_SHORT).show();
+                break;
         }
 
+        i.putExtras(b);
+        startActivity(i);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
     }
 }

@@ -5,8 +5,12 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/pat_profile"
+            android:icon="@drawable/ic_action_person"
+            android:title="@string/profile" />
+        <item
             android:id="@+id/pat_appointment"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_action_appointments"
             android:title="@string/appointment" />
         <item
             android:id="@+id/pat_reports"
@@ -14,23 +18,15 @@
             android:title="@string/reports" />
         <item
             android:id="@+id/pat_bills"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_action_bills"
             android:title="@string/bills" />
         <item
             android:id="@+id/pat_feedback"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_action_feedback"
             android:title="@string/feedback" />
         <item
-            android:id="@+id/pat_d_availabe"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/doctors_available" />
-        <item
-            android:id="@+id/pat_profile"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/profile" />
-        <item
             android:id="@+id/pat_logout"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_action_logout"
             android:title="@string/logout" />
     </group>
 
