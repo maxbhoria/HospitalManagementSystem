@@ -11,11 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.hospitalmanagementsystem.desktop_admin.Desktop_Admin;
-import com.example.hospitalmanagementsystem.doctor.Doctor;
-import com.example.hospitalmanagementsystem.patient.Patient;
+import com.example.hospitalmanagementsystem.desktop_admin.AdminNavigation;
+import com.example.hospitalmanagementsystem.doctor.DoctorNavigation;
 import com.example.hospitalmanagementsystem.patient.PatientNavigation;
-import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
+import com.example.hospitalmanagementsystem.staff_member.StaffNavigation;
 
 public class Login extends AppCompatActivity {
 
@@ -65,13 +64,13 @@ public class Login extends AppCompatActivity {
 
                     Intent i;
                     if (ut.equals("Doctor")) {
-                        i = new Intent(Login.this, Doctor.class);
+                        i = new Intent(Login.this, DoctorNavigation.class);
                     } else if (ut.equals("Patient")) {
-                        i = new Intent(Login.this, Patient.class);
+                        i = new Intent(Login.this, PatientNavigation.class);
                     } else if (ut.equals("Staff Member")) {
-                        i = new Intent(Login.this, Staff_Member.class);
+                        i = new Intent(Login.this, StaffNavigation.class);
                     } else {
-                        i = new Intent(Login.this, Desktop_Admin.class);
+                        i = new Intent(Login.this, AdminNavigation.class);
                     }
 
                     i.putExtras(b);
