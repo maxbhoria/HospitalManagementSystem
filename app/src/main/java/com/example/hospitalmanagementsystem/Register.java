@@ -13,10 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.hospitalmanagementsystem.desktop_admin.Desktop_Admin;
-import com.example.hospitalmanagementsystem.doctor.Doctor;
-import com.example.hospitalmanagementsystem.patient.Patient;
-import com.example.hospitalmanagementsystem.staff_member.Staff_Member;
+import com.example.hospitalmanagementsystem.desktop_admin.AdminNavigation;
+import com.example.hospitalmanagementsystem.doctor.DoctorNavigation;
+import com.example.hospitalmanagementsystem.patient.PatientNavigation;
+import com.example.hospitalmanagementsystem.staff_member.StaffNavigation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +56,7 @@ public class Register extends AppCompatActivity {
         bgroup = findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);
 
-        //SET UP THE SPINNER DROOPDOWN
+        //SET UP THE SPINNER DROPDOWN
         List<String> category = new ArrayList<>();
         category.add("Patient");
         category.add("Doctor");
@@ -154,16 +154,16 @@ public class Register extends AppCompatActivity {
 
                             switch (utypes) {
                                 case "Patient":
-                                    i = new Intent(Register.this, Patient.class);
+                                    i = new Intent(Register.this, PatientNavigation.class);
                                     break;
                                 case "Doctor":
-                                    i = new Intent(Register.this, Doctor.class);
+                                    i = new Intent(Register.this, DoctorNavigation.class);
                                     break;
                                 case "Staff Member":
-                                    i = new Intent(Register.this, Staff_Member.class);
+                                    i = new Intent(Register.this, StaffNavigation.class);
                                     break;
                                 default:
-                                    i = new Intent(Register.this, Desktop_Admin.class);
+                                    i = new Intent(Register.this, AdminNavigation.class);
                                     break;
                             }
 
