@@ -33,13 +33,7 @@ public class AdminNavigation extends AppCompatActivity
     Intent i;
     String username, password, user_type;
     DatabaseHelper dbh;
-    ListView lv_appointment;
-    List<String> u_p;
-    List<String> p_p;
-    List<RowItem> rowItems;
-    ArrayList<String> doc = new ArrayList<>();
-    ArrayList<String> pat = new ArrayList<>();
-    ArrayList<String> pro = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +41,6 @@ public class AdminNavigation extends AppCompatActivity
         setContentView(R.layout.activity_admin_navigation);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        lv_appointment = (ListView) findViewById(R.id.lv_pending_appontments);
-        u_p = new ArrayList<>();
-        p_p = new ArrayList<>();
         Bundle bb = getIntent().getExtras();
         assert bb != null;
         username = bb.getString("username");
@@ -62,68 +53,6 @@ public class AdminNavigation extends AppCompatActivity
             String name = y.getString(1);
             getSupportActionBar().setTitle("Welcome " + name);
         }
-        Cursor y1 = dbh.checkduplicates_in_user_credentials("", "", getResources().getString(R.string.all_pending_appointment));
-        if (y1.moveToFirst()) {
-            while (true) {
-
-                //pateinet approvl has three mode W - wait, A - approved, F - finished
-
-                if (y1.getString(4).equals("W")) {
-                    DatabaseHelper dbh1 = new DatabaseHelper(this);
-                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y1.getString(0), y1.getString(1), getResources().getString(R.string.user_credentials));
-                    DatabaseHelper dbh2 = new DatabaseHelper(this);
-                    Cursor z2 = dbh2.checkduplicates_in_user_credentials(y.getString(2), y1.getString(3), getResources().getString(R.string.user_credentials));
-                    u_p.add(y1.getString(0));
-                    p_p.add(y1.getString(1));
-
-                    if (z1.moveToNext()) {
-                        pat.add(z1.getString(1) + " " + z1.getString(2));
-                    }
-
-                    if (z2.moveToNext()) {
-                        doc.add(z2.getString(1) + " " + z2.getString(2));
-                    }
-                    pro.add(y1.getString(5));
-
-                    dbh1.close();
-                    dbh2.close();
-                }
-
-                if (y1.isLast())
-                    break;
-
-                y1.moveToNext();
-            }
-
-            rowItems = new ArrayList<>();
-
-            for (int i = 0; i < doc.size(); i++) {
-                RowItem item = new RowItem(doc.get(i), pat.get(i), pro.get(i));
-                rowItems.add(item);
-            }
-
-            CustomListViewAdapter adapter = new CustomListViewAdapter(this, R.layout.custom_adapter, rowItems);
-            lv_appointment.setAdapter(adapter);
-        } else {
-            Message.message(AdminNavigation.this, "No Pending Apppointments");
-        }
-        lv_appointment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Cursor x = dbh.checkduplicates_in_user_credentials(u_p.get(position), p_p.get(position), pro.get(position));
-                boolean y = false;
-                if (x.moveToFirst()) {
-                    y = dbh.update_doctor_patient(x.getString(0), x.getString(1), x.getString(2), x.getString(3), "A", x.getString(5), x.getString(6), x.getString(7));
-                }
-
-                if (y) {
-                    Message.message(AdminNavigation.this, "Application Approved");
-                } else {
-                    Message.message(AdminNavigation.this, "Not Approved");
-                }
-            }
-        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -188,6 +117,9 @@ public class AdminNavigation extends AppCompatActivity
                 break;
             case R.id.nav_admin_delete_user:
                 i = new Intent(AdminNavigation.this, Delete_Users.class);
+                break;
+            case R.id.nav_admin_grant_patient_appointment:
+                i = new Intent(AdminNavigation.this, Grant_appointment.class);
                 break;
             case R.id.nav_admin_logout:
                 i = new Intent(AdminNavigation.this, MainActivity.class);

@@ -347,7 +347,7 @@
             android:name=".desktop_admin.AdminNavigation"
             android:label="@string/title_activity_admin_navigation"
             android:theme="@style/AppTheme" />
-        <activity android:name=".NearHospitals"></activity>
+        <activity android:name=".NearHospitals"/>
     </application>
 
 </manifest>

@@ -32,6 +32,7 @@ import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Doctors_available;
 import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.Login;
+import com.example.hospitalmanagementsystem.MainActivity;
 import com.example.hospitalmanagementsystem.NearHospitals;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
@@ -198,7 +199,7 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
                 i = new Intent(PatientNavigation.this, Doctors_available.class);
                 break;
             case R.id.pat_logout:
-                i = new Intent(PatientNavigation.this, Login.class);
+                i = new Intent(PatientNavigation.this, MainActivity.class);
                 break;
         }
 

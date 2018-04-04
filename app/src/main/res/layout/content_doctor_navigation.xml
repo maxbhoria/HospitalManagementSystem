@@ -9,18 +9,5 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".doctor.DoctorNavigation"
     tools:showIn="@layout/app_bar_doctor_navigation">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:gravity="center_horizontal"
-        android:text="@string/current_patients"
-        android:textSize="25sp" />
 
-    <ListView
-        android:id="@+id/lv_current_patients"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:divider="#2f2f2f"
-        android:dividerHeight="0.5dp" />
 </LinearLayout>

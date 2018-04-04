@@ -10,20 +10,4 @@
     tools:context=".desktop_admin.AdminNavigation"
     tools:showIn="@layout/app_bar_admin_navigation">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/all_pending_appointments"
-        android:textSize="22sp" />
-
-    <ListView
-        android:id="@+id/lv_pending_appontments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:divider="#2f2f2f"
-        android:dividerHeight="0.5dp"
-        android:drawSelectorOnTop="true"
-        android:focusable="true"/>
 </LinearLayout>

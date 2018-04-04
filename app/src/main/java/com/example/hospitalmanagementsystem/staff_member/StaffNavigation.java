@@ -29,8 +29,6 @@ public class StaffNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Intent i;
     DatabaseHelper dbh;
-    ArrayList<String> d_name = new ArrayList<>();
-    ListView lv_bills;
     String username, password, user_type;
 
     @Override
@@ -39,7 +37,6 @@ public class StaffNavigation extends AppCompatActivity
         setContentView(R.layout.activity_staff_navigation);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        lv_bills = findViewById(R.id.lv_assigned_doctors);
         Bundle bb = getIntent().getExtras();
         assert bb != null;
         username = bb.getString("username");
@@ -50,31 +47,6 @@ public class StaffNavigation extends AppCompatActivity
         if (y.moveToFirst()) {
             String name = y.getString(1);
             getSupportActionBar().setTitle("Welcome " + name);
-        }
-        Cursor y1 = dbh.checkduplicates_in_user_credentials("", "", getResources().getString(R.string.staff));
-        if (y1.moveToFirst()) {
-            while (true) {
-                if (y1.getString(4).equals("Y")) {
-
-                    DatabaseHelper dbh1 = new DatabaseHelper(this);
-                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y1.getString(2), y1.getString(3), getResources().getString(R.string.user_credentials));
-
-                    if (z1.moveToNext()) {
-                        d_name.add("Dr. " + z1.getString(1) + " " + z1.getString(2));
-                    }
-                }
-
-                if (y1.isLast())
-                    break;
-                y1.moveToNext();
-            }
-
-            ArrayAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, d_name);
-            lv_bills.setAdapter(adapter);
-        }
-        else {
-            Message.message(StaffNavigation.this, "Sorry You have No Assigned Doctor Right, Now");
-            finish();
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -125,6 +97,9 @@ public class StaffNavigation extends AppCompatActivity
                 break;
             case R.id.nav_staff_feedback:
                 i = new Intent(StaffNavigation.this, Feedback.class);
+                break;
+            case R.id.nav_staff_assigned_doctors:
+                i = new Intent(StaffNavigation.this, Assigned_Doctors.class);
                 break;
             case R.id.nav_staff_logout:
                 i = new Intent(StaffNavigation.this, MainActivity.class);
