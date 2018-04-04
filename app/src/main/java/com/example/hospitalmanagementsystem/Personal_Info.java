@@ -20,6 +20,7 @@ public class Personal_Info extends AppCompatActivity {
         db = new DatabaseHelper(this);
 
         Bundle bb = getIntent().getExtras();
+        assert bb != null;
         username = bb.getString("username");
         password = bb.getString("password");
         user_type = bb.getString("user_type");

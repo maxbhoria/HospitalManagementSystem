@@ -63,14 +63,19 @@ public class Login extends AppCompatActivity {
                     b.putString("user_type", ut);
 
                     Intent i;
-                    if (ut.equals("Doctor")) {
-                        i = new Intent(Login.this, DoctorNavigation.class);
-                    } else if (ut.equals("Patient")) {
-                        i = new Intent(Login.this, PatientNavigation.class);
-                    } else if (ut.equals("Staff Member")) {
-                        i = new Intent(Login.this, StaffNavigation.class);
-                    } else {
-                        i = new Intent(Login.this, AdminNavigation.class);
+                    switch (ut) {
+                        case "Doctor":
+                            i = new Intent(Login.this, DoctorNavigation.class);
+                            break;
+                        case "Patient":
+                            i = new Intent(Login.this, PatientNavigation.class);
+                            break;
+                        case "Staff Member":
+                            i = new Intent(Login.this, StaffNavigation.class);
+                            break;
+                        default:
+                            i = new Intent(Login.this, AdminNavigation.class);
+                            break;
                     }
 
                     i.putExtras(b);
