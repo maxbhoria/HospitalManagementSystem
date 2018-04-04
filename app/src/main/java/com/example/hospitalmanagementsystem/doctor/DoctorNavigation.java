@@ -60,32 +60,34 @@ public class DoctorNavigation extends AppCompatActivity
         password = bb.getString("password");
         user_type = bb.getString("user_type");
         Cursor y = dbh.checkduplicates_in_user_credentials(username, password, getResources().getString(R.string.user_credentials));
-
         if (y.moveToFirst()) {
             String name = y.getString(1);
             getSupportActionBar().setTitle("Welcome " + name);
+        }
+        Cursor y1 = dbh.checkduplicates_in_user_credentials(username, password, getResources().getString(R.string.doctor_patient));
+        if (y1.moveToFirst()) {
             while (true) {
-                if (y.getString(4).equals("A")) {
+                if (y1.getString(4).equals("A")) {
 
                     DatabaseHelper dbh1 = new DatabaseHelper(this);
-                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y.getString(0), y.getString(1), getResources().getString(R.string.user_credentials));
+                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y1.getString(0), y1.getString(1), getResources().getString(R.string.user_credentials));
 
-                    p_u.add(y.getString(0));
-                    p_p.add(y.getString(1));
-                    p_f.add(y.getString(6));
+                    p_u.add(y1.getString(0));
+                    p_p.add(y1.getString(1));
+                    p_f.add(y1.getString(6));
                     if (z1.moveToNext()) {
                         p_name.add(z1.getString(1) + " " + z1.getString(2));
                     }
 
-                    p_problem.add(y.getString(5));
+                    p_problem.add(y1.getString(5));
 
                     dbh1.close();
                 }
 
-                if (y.isLast())
+                if (y1.isLast())
                     break;
 
-                y.moveToNext();
+                y1.moveToNext();
             }
             ArrayAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, p_name);
             lv_patients.setAdapter(adapter);

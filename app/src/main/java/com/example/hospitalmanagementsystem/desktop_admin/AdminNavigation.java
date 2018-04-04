@@ -68,13 +68,13 @@ public class AdminNavigation extends AppCompatActivity
 
                 //pateinet approvl has three mode W - wait, A - approved, F - finished
 
-                if (y.getString(4).equals("W")) {
+                if (y1.getString(4).equals("W")) {
                     DatabaseHelper dbh1 = new DatabaseHelper(this);
-                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y.getString(0), y.getString(1), getResources().getString(R.string.user_credentials));
+                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y1.getString(0), y1.getString(1), getResources().getString(R.string.user_credentials));
                     DatabaseHelper dbh2 = new DatabaseHelper(this);
-                    Cursor z2 = dbh2.checkduplicates_in_user_credentials(y.getString(2), y.getString(3), getResources().getString(R.string.user_credentials));
-                    u_p.add(y.getString(0));
-                    p_p.add(y.getString(1));
+                    Cursor z2 = dbh2.checkduplicates_in_user_credentials(y.getString(2), y1.getString(3), getResources().getString(R.string.user_credentials));
+                    u_p.add(y1.getString(0));
+                    p_p.add(y1.getString(1));
 
                     if (z1.moveToNext()) {
                         pat.add(z1.getString(1) + " " + z1.getString(2));
@@ -83,16 +83,16 @@ public class AdminNavigation extends AppCompatActivity
                     if (z2.moveToNext()) {
                         doc.add(z2.getString(1) + " " + z2.getString(2));
                     }
-                    pro.add(y.getString(5));
+                    pro.add(y1.getString(5));
 
                     dbh1.close();
                     dbh2.close();
                 }
 
-                if (y.isLast())
+                if (y1.isLast())
                     break;
 
-                y.moveToNext();
+                y1.moveToNext();
             }
 
             rowItems = new ArrayList<>();
@@ -106,7 +106,6 @@ public class AdminNavigation extends AppCompatActivity
             lv_appointment.setAdapter(adapter);
         } else {
             Message.message(AdminNavigation.this, "No Pending Apppointments");
-            finish();
         }
         lv_appointment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -120,7 +119,6 @@ public class AdminNavigation extends AppCompatActivity
 
                 if (y) {
                     Message.message(AdminNavigation.this, "Application Approved");
-                    finish();
                 } else {
                     Message.message(AdminNavigation.this, "Not Approved");
                 }

@@ -47,24 +47,26 @@ public class StaffNavigation extends AppCompatActivity
         user_type = bb.getString("user_type");
         dbh = new DatabaseHelper(this);
         Cursor y = dbh.checkduplicates_in_user_credentials(username, password, getResources().getString(R.string.user_credentials));
-
         if (y.moveToFirst()) {
             String name = y.getString(1);
             getSupportActionBar().setTitle("Welcome " + name);
+        }
+        Cursor y1 = dbh.checkduplicates_in_user_credentials("", "", getResources().getString(R.string.staff));
+        if (y1.moveToFirst()) {
             while (true) {
-                if (y.getString(4).equals("Y")) {
+                if (y1.getString(4).equals("Y")) {
 
                     DatabaseHelper dbh1 = new DatabaseHelper(this);
-                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y.getString(2), y.getString(3), getResources().getString(R.string.user_credentials));
+                    Cursor z1 = dbh1.checkduplicates_in_user_credentials(y1.getString(2), y1.getString(3), getResources().getString(R.string.user_credentials));
 
                     if (z1.moveToNext()) {
                         d_name.add("Dr. " + z1.getString(1) + " " + z1.getString(2));
                     }
                 }
 
-                if (y.isLast())
+                if (y1.isLast())
                     break;
-                y.moveToNext();
+                y1.moveToNext();
             }
 
             ArrayAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, d_name);
