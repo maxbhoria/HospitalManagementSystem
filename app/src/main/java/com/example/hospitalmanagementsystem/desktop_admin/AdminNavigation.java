@@ -57,10 +57,13 @@ public class AdminNavigation extends AppCompatActivity
         user_type = bb.getString("user_type");
         dbh = new DatabaseHelper(this);
         Cursor y = dbh.checkduplicates_in_user_credentials(username, password, getResources().getString(R.string.user_credentials));
-
-        if (y.moveToFirst()) {
+        if(y.moveToFirst())
+        {
             String name = y.getString(1);
             getSupportActionBar().setTitle("Welcome " + name);
+        }
+        Cursor y1 = dbh.checkduplicates_in_user_credentials("", "", getResources().getString(R.string.all_pending_appointment));
+        if (y1.moveToFirst()) {
             while (true) {
 
                 //pateinet approvl has three mode W - wait, A - approved, F - finished
