@@ -5,10 +5,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -31,15 +29,15 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.example.hospitalmanagementsystem.DatabaseHelper;
+import com.example.hospitalmanagementsystem.Doctors_available;
 import com.example.hospitalmanagementsystem.Feedback;
-import com.example.hospitalmanagementsystem.MainActivity;
+import com.example.hospitalmanagementsystem.Login;
 import com.example.hospitalmanagementsystem.NearHospitals;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 import com.example.hospitalmanagementsystem.patient.view_report.View_Report;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 public class PatientNavigation extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BaseSliderView.OnSliderClickListener,
         ViewPagerEx.OnPageChangeListener {
@@ -49,36 +47,43 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
     HashMap<String, Integer> Hash_file_maps;
     Button btn_help;
     TextView tv_address;
-
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+//mohit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_navigation);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        sliderLayout = findViewById(R.id.slider);
+        sliderLayout = (SliderLayout) findViewById(R.id.slider);
         btn_help = findViewById(R.id.bt_help);
         tv_address = findViewById(R.id.tv_details);
-        tv_address.setText("H-33, Sector- 27, Noida, \nU.P. - 201 301\nPhone: 120-2444444 / 120-2445566\nEmail: kailash.noida@kailashhealthcare.com");
+        tv_address.setText("H-33, Sector- 27, Noida, \n" +
+                "U.P. - 201 301\n" + "Phone: 120-2444444 / 120-2445566\n" + "Email: kailash.noida@kailashhealthcare.com");
         btn_help.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 198));
                 if (ActivityCompat.checkSelfPermission(PatientNavigation.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
                     return;
                 }
                 startActivity(intent);
             }
         });
-        Hash_file_maps = new HashMap<>();
+        Hash_file_maps = new HashMap<String, Integer>();
 
         Hash_file_maps.put("HMS", R.drawable.slider_one);
-        Hash_file_maps.put("HMS1", R.drawable.slider_two);
-        Hash_file_maps.put("HMS2", R.drawable.slider_three);
-        Hash_file_maps.put("HMS3", R.drawable.slider_four);
-        Hash_file_maps.put("HMS4", R.drawable.slider_five);
+        Hash_file_maps.put("HMS", R.drawable.slider_two);
+        Hash_file_maps.put("HMS", R.drawable.slider_three);
+        Hash_file_maps.put("HMS", R.drawable.slider_four);
+        Hash_file_maps.put("HMS", R.drawable.slider_five);
 
         for (String name : Hash_file_maps.keySet()) {
 
@@ -117,22 +122,23 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
 
         if (y.moveToFirst()) {
             String name = y.getString(1);
-            Objects.requireNonNull(getSupportActionBar()).setTitle("Welcome " + name);
+            getSupportActionBar().setTitle("Welcome " + name);
         }
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PatientNavigation.this, NearHospitals.class);
+                Intent intent=new Intent(PatientNavigation.this, NearHospitals.class);
                 startActivity(intent);
             }
         });
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
+//mohit
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -188,9 +194,11 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
             case R.id.pat_feedback:
                 i = new Intent(PatientNavigation.this, Feedback.class);
                 break;
+            case R.id.pat_d_availabe:
+                i = new Intent(PatientNavigation.this, Doctors_available.class);
+                break;
             case R.id.pat_logout:
-                i = new Intent(PatientNavigation.this, MainActivity.class);
-                Toast.makeText(this, " Log out Successfully ", Toast.LENGTH_SHORT).show();
+                i = new Intent(PatientNavigation.this, Login.class);
                 break;
         }
 
@@ -239,18 +247,4 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
     public void onPageScrollStateChanged(int state) {
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
 }

@@ -25,6 +25,10 @@
             android:icon="@drawable/ic_action_feedback"
             android:title="@string/feedback" />
         <item
+            android:id="@+id/pat_d_availabe"
+            android:icon="@drawable/ic_doctor"
+            android:title="@string/available_doctor" />
+        <item
             android:id="@+id/pat_logout"
             android:icon="@drawable/ic_action_logout"
             android:title="@string/logout" />
