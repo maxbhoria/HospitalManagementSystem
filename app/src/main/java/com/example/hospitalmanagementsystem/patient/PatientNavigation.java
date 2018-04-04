@@ -80,10 +80,10 @@ public class PatientNavigation extends AppCompatActivity implements NavigationVi
         Hash_file_maps = new HashMap<String, Integer>();
 
         Hash_file_maps.put("HMS", R.drawable.slider_one);
-        Hash_file_maps.put("HMS", R.drawable.slider_two);
-        Hash_file_maps.put("HMS", R.drawable.slider_three);
-        Hash_file_maps.put("HMS", R.drawable.slider_four);
-        Hash_file_maps.put("HMS", R.drawable.slider_five);
+        Hash_file_maps.put("HMS1", R.drawable.slider_two);
+        Hash_file_maps.put("HMS2", R.drawable.slider_three);
+        Hash_file_maps.put("HMS3", R.drawable.slider_four);
+        Hash_file_maps.put("HMS4", R.drawable.slider_five);
 
         for (String name : Hash_file_maps.keySet()) {
 

@@ -12,9 +12,6 @@ import com.example.hospitalmanagementsystem.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Neeraj on 08-Apr-16.
- */
 public class Assigned_Doctors extends AppCompatActivity {
 
     String username, password, user_type;
@@ -56,7 +53,7 @@ public class Assigned_Doctors extends AppCompatActivity {
             ArrayAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, d_name);
             lv_bills.setAdapter(adapter);
         } else {
-            Message.message(Assigned_Doctors.this, "Sorry You have No Bills Right, Now");
+            Message.message(Assigned_Doctors.this, "Sorry You have No Assigned Doctor Right Now");
             finish();
         }
     }

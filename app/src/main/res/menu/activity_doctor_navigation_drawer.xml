@@ -21,10 +21,6 @@
             android:icon="@drawable/ic_action_timing"
             android:title="Set Your Referral Timings" />
         <item
-            android:id="@+id/nav_doc_uploadReport"
-            android:icon="@drawable/ic_action_upload_report"
-            android:title="Upload Patient Report" />
-        <item
             android:id="@+id/nav_doc_viewAssignedStaff"
             android:icon="@drawable/ic_action_staff"
             android:title="View Staff" />
