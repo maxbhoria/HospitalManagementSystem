@@ -10,26 +10,31 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.MainActivity;
-import com.example.hospitalmanagementsystem.Message;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class StaffNavigation extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
     Intent i;
     DatabaseHelper dbh;
     String username, password, user_type;
+    TextView tv_details;
+    SliderLayout sliderLayout;
+    HashMap<String, Integer> Hash_file_maps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,11 @@ public class StaffNavigation extends AppCompatActivity
         setContentView(R.layout.activity_staff_navigation);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        sliderLayout = (SliderLayout) findViewById(R.id.slider);
+        tv_details = findViewById(R.id.tv_details);
+        tv_details.setText("1). In this staff person can see his duty with the concern doctor\n"+"2) In this staff can " +
+                "update  his profile\n"
+                +"3) In this doctor can send his feedback/complain");
         Bundle bb = getIntent().getExtras();
         assert bb != null;
         username = bb.getString("username");
@@ -127,5 +137,32 @@ public class StaffNavigation extends AppCompatActivity
     @Override
     protected void onRestart() {
         super.onRestart();
+    }
+    @Override
+    protected void onStop() {
+
+        sliderLayout.stopAutoCycle();
+
+        super.onStop();
+    }
+
+    @Override
+    public void onSliderClick(BaseSliderView slider) {
+
+        Toast.makeText(this, slider.getBundle().get("extra") + "", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+        Log.d("Slider Demo", "Page Changed: " + position);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
     }
 }

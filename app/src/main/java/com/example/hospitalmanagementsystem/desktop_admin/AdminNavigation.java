@@ -12,27 +12,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.hospitalmanagementsystem.CustomListViewAdapter;
+import com.daimajia.slider.library.SliderLayout;
 import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.MainActivity;
-import com.example.hospitalmanagementsystem.Message;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
-import com.example.hospitalmanagementsystem.RowItem;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class AdminNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Intent i;
     String username, password, user_type;
     DatabaseHelper dbh;
+    TextView tv_details;
+    SliderLayout sliderLayout;
+    HashMap<String, Integer> Hash_file_maps;
 
 
     @Override
@@ -41,6 +39,11 @@ public class AdminNavigation extends AppCompatActivity
         setContentView(R.layout.activity_admin_navigation);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        sliderLayout = (SliderLayout) findViewById(R.id.slider);
+        tv_details = findViewById(R.id.tv_details);
+        tv_details.setText("1). In this admin have to approve the appointment\n"+"2) In this admin can maintain the pending bills\n"
+                +"3) In this Admin have to assign the staff to doctors\n"+"4) In this Admin can " +
+                "delete any user");
         Bundle bb = getIntent().getExtras();
         assert bb != null;
         username = bb.getString("username");

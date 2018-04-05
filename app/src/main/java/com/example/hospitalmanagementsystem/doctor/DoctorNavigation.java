@@ -10,33 +10,34 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.slider.library.Animations.DescriptionAnimation;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.example.hospitalmanagementsystem.DatabaseHelper;
 import com.example.hospitalmanagementsystem.Feedback;
 import com.example.hospitalmanagementsystem.MainActivity;
-import com.example.hospitalmanagementsystem.Message;
 import com.example.hospitalmanagementsystem.Personal_Info;
 import com.example.hospitalmanagementsystem.R;
 import com.example.hospitalmanagementsystem.doctor.doctor_patient.Report_Upload;
-import com.example.hospitalmanagementsystem.doctor.doctor_patient.Write_Report;
 import com.example.hospitalmanagementsystem.doctor.leaves.Leaves;
 
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.HashMap;
 
 public class DoctorNavigation extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
     Intent i;
     String username, password, user_type;
-
-
+    TextView tv_details;
+    SliderLayout sliderLayout;
+    HashMap<String, Integer> Hash_file_maps;
     DatabaseHelper dbh = new DatabaseHelper(this);
 
     @Override
@@ -45,9 +46,49 @@ public class DoctorNavigation extends AppCompatActivity
         setContentView(R.layout.activity_doctor_navigation);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        sliderLayout = (SliderLayout) findViewById(R.id.slider);
+        tv_details = findViewById(R.id.tv_details);
+        tv_details.setText("1). In this Doctor have to add the specialised field so that " +
+                "Patient can reach the doctor according to the patient problem\n"+"2) In this doctor can apply for the leave\n"
+                +"3) In this section doctor can add his time slot for the availability\n"+"4) In this doctor can " +
+                "upload the patient report\n"+"5) In this doctor can send his feedback/complain");
         Bundle bb = getIntent().getExtras();
         assert bb != null;
+        Hash_file_maps = new HashMap<String, Integer>();
 
+        Hash_file_maps.put("HMS", R.drawable.slider_one);
+        Hash_file_maps.put("HMS1", R.drawable.slider_two);
+        Hash_file_maps.put("HMS2", R.drawable.slider_three);
+        Hash_file_maps.put("HMS3", R.drawable.slider_four);
+        Hash_file_maps.put("HMS4", R.drawable.slider_five);
+
+        for (String name : Hash_file_maps.keySet()) {
+
+            TextSliderView textSliderView = new TextSliderView(DoctorNavigation.this);
+            textSliderView
+                    .description(name)
+                    .image(Hash_file_maps.get(name))
+                    .setScaleType(BaseSliderView.ScaleType.Fit)
+                    .setOnSliderClickListener(this);
+            textSliderView.bundle(new Bundle());
+            textSliderView.getBundle()
+                    .putString("extra", name);
+            sliderLayout.addSlider(textSliderView);
+        }
+        sliderLayout.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        sliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        sliderLayout.setCustomAnimation(new DescriptionAnimation());
+        sliderLayout.setDuration(3000);
+        sliderLayout.addOnPageChangeListener(this);
+        sliderLayout.setPresetTransformer(SliderLayout.Transformer.DepthPage);
+
+        sliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+
+        sliderLayout.setCustomAnimation(new DescriptionAnimation());
+
+        sliderLayout.setDuration(3000);
+
+        sliderLayout.addOnPageChangeListener(DoctorNavigation.this);
         dbh = new DatabaseHelper(this);
 
         username = bb.getString("username");
@@ -146,7 +187,35 @@ public class DoctorNavigation extends AppCompatActivity
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+
+        sliderLayout.stopAutoCycle();
+
+        super.onStop();
+    }
+
+    @Override
+    public void onSliderClick(BaseSliderView slider) {
+
+        Toast.makeText(this, slider.getBundle().get("extra") + "", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+        Log.d("Slider Demo", "Page Changed: " + position);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
     }
 }

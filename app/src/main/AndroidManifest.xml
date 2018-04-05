@@ -6,8 +6,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -22,10 +22,11 @@
         tools:ignore="GoogleAppIndexingWarning">
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
+            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_api" />
+
         <activity
             android:name=".Splash"
             android:screenOrientation="portrait">
@@ -347,7 +348,10 @@
             android:name=".desktop_admin.AdminNavigation"
             android:label="@string/title_activity_admin_navigation"
             android:theme="@style/AppTheme" />
-        <activity android:name=".NearHospitals"/>
+        <activity android:name=".NearHospitals" />
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

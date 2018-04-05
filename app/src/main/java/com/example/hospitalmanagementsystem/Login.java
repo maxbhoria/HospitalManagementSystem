@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.hospitalmanagementsystem.desktop_admin.AdminNavigation;
 import com.example.hospitalmanagementsystem.doctor.DoctorNavigation;
@@ -23,6 +24,7 @@ public class Login extends AppCompatActivity {
     Button Bregister, Blogin;
     DatabaseHelper dbh;
     Toolbar toolbar;
+    TextView tv_forgot_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +33,18 @@ public class Login extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         username = findViewById(R.id.etusername);
+        tv_forgot_password = findViewById(R.id.tv_forgot_password);
         password = findViewById(R.id.etpassword);
         Bregister = findViewById(R.id.bregister);
         Blogin = findViewById(R.id.blogin);
         dbh = new DatabaseHelper(this);
-
+        tv_forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Login.this,ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
         Bregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
